@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth System</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="auth-links">
+                <a href="#" id="login-link">Login</a>
+                <a href="#" id="signup-link">Sign Up</a>
+            </div>
+            <div id="user-profile" style="display: none;">
+                <span id="username-display"></span>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="auth-forms">
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form">
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="auth-btn">
+                        <span class="btn-text">Login</span>
+                        <div class="spinner"></div>
+                    </button>
+                    <p class="form-toggle">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+                    <div id="login-error" class="error-message"></div>
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signup-form" class="auth-form" style="display: none;">
+                    <h2>Sign Up</h2>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="signup-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="signup-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" required>
+                    </div>
+                    <button type="submit" class="auth-btn">
+                        <span class="btn-text">Sign Up</span>
+                        <div class="spinner"></div>
+                    </button>
+                    <p class="form-toggle">Already have an account? <a href="#" id="show-login">Login</a></p>
+                    <div id="signup-error" class="error-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
