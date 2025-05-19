@@ -3,7 +3,7 @@ const loginForm = document.getElementById('login-form');
 const signupForm = document.getElementById('signup-form');
 
 // Configuration
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://user-auth-backend-ot4f.onrender.com';
 const API = {
     login: `${API_BASE}/api/login`,
     signup: `${API_BASE}/api/signup`,
